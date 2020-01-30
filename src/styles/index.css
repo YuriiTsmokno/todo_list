@@ -1,6 +1,15 @@
 div h1 {
     margin: 10px auto;
     text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div input[type=search] {
+    width: 60%;
+    height: 40px;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
 }
 
 ul {
@@ -8,5 +17,6 @@ ul {
 }
 
 ul li {
-    font-size: larger;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
