@@ -1,3 +1,16 @@
+.item-add-form {
+  margin-top: 10px;
+}
+
+.item-add-form input {
+  margin-right: 3px;
+  width: 80%;
+}
+
+.item-add-form button {
+  width: 20%;
+}
+
 .app-header {
   align-items: flex-end;
 }
@@ -40,7 +53,7 @@
 
 .todo-list-item.important .todo-list-item-label {
   font-weight: bold;
-  color: steelblue;
+  color: rgba(42, 91, 182, 0.719);
 }
 
 .todo-list .list-group-item {
@@ -49,7 +62,7 @@
 
 .todo-app {
   margin: 2rem auto 0 auto;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .top-panel {

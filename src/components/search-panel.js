@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import '../styles/index.css';
 
-const SearchPanel = () => {
-    const searchText = "Type to search";
-    return (
-        <input type="text" className="form-control search-input" placeholder={searchText} />
-    );
-};
+export default class SearchPanel extends PureComponent {
+    
+    state = {
+        term: ''
+    };
 
-export default SearchPanel;
+    onSearchChange = (event) => {
+        const term = event.target.value;
+        this.setState({ term });
+        this.props.onSearchChange(term);
+    }
+    
+    render() {
+        return(
+            <input type="text" 
+                className="form-control search-input" 
+                placeholder="Type to search"
+                value={this.state.term}
+                onChange={this.onSearchChange} />
+        );
+    };
+};
