@@ -13,11 +13,24 @@ export default class ItemAddForm extends PureComponent {
     };
 
     onSubmit = (event) => {
-        event.preventDefault();
-        this.props.onItemAdded(this.state.label);
-        this.setState({
-            label: ''
-        });
+        if(this.state.label !== "") {
+            if(this.state.label.length <= 30) {
+                event.preventDefault();
+                this.props.onItemAdded(this.state.label);
+                this.setState({
+                    label: ""
+                });
+            } else {
+                let newStr = this.state.label.slice(0, 30);
+                event.preventDefault();
+                this.props.onItemAdded(newStr);
+                this.setState({
+                    label: ""
+                });
+            }
+        } else {
+            alert("Please insert any value to input!");
+        }
     };
 
     render() {

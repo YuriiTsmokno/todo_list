@@ -21,12 +21,14 @@ class TodoListItem extends PureComponent {
                     onClick={onToggleDone} >
                     {label}
                 </span>
-                <button type="button" onClick={onDeleted} className="btn btn-outline-danger btn-sm float-right">
-                    <i className="fas fa-trash"></i>
-                </button>
-                <button type="button" onClick={onToggleImportant} className="btn btn-outline-success btn-sm float-right">
-                    <i className="fa fa-exclamation"></i>
-                </button>
+                <div className="todo-list-block-buttons">
+                    <button type="button" onClick={onDeleted} className="btn btn-outline-danger btn-sm float-right">
+                        <i className="fas fa-trash"></i>
+                    </button>
+                    <button type="button" onClick={onToggleImportant} className="btn btn-outline-success btn-sm float-right">
+                        <i className="fa fa-exclamation"></i>
+                    </button>
+                </div>
             </span>
         );
     }
