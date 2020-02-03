@@ -29,7 +29,8 @@ export default class ItemAddForm extends PureComponent {
                 });
             }
         } else {
-            alert("Please insert any value to input!");
+            event.preventDefault();
+            //alert("Please insert any value to input!");
         }
     };
 
